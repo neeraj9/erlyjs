@@ -38,7 +38,7 @@
     parse/1]).
  
 now() ->
-    {MSecs, Secs, _} = erlang:now(),
+    {MSecs, Secs, _} = erlang:timestamp(),
     1000000 * MSecs + Secs.   
     
 parse(_DateStr) ->

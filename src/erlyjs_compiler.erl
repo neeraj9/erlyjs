@@ -48,7 +48,7 @@ compile(File, Module, Options) ->
     case catch M:F(File) of
     {ok, Data} ->
         crypto:start(),
-        CheckSum = crypto:sha(Data),
+        CheckSum = crypto:hash(sha, Data),
         case parse(CheckSum, Data, Ctx) of
         ok ->
             ok;

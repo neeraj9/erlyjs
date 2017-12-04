@@ -100,7 +100,7 @@ pow(X, Y) ->
     math:pow(X, Y). 
 
 random() ->
-    random:uniform(). 
+    rand:uniform(). 
 
 round(X) ->
     erlang:round(X). 
